@@ -1,0 +1,72 @@
+export const mockFaqs = [
+  {
+    question: 'Do I need to register to request service?',
+    answer: 'No, you do not need to register or create an account. You can request any of our services directly through our Service Request form or by calling us.',
+    category: 'General',
+    isActive: true,
+    displayOrder: 1,
+  },
+  {
+    question: 'Which electrical services are available?',
+    answer: 'We provide a wide range of electrical services including CCTV Installation, Light Fitting, AC Installation, Electrical Repairing, and Full House Wiring for residential and commercial properties.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 2,
+  },
+  {
+    question: 'Do you handle CCTV installation?',
+    answer: 'Yes, we provide professional CCTV installation services. Our technicians can help position, install, and configure your indoor and outdoor security cameras.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 3,
+  },
+  {
+    question: 'Do you provide light fitting?',
+    answer: 'Yes, we handle all types of light fitting, from replacing standard bulbs and fixtures to installing decorative ceiling lighting and outdoor lighting solutions.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 4,
+  },
+  {
+    question: 'Do you install AC electrical connections?',
+    answer: 'Yes, we manage the complete electrical installation for air conditioning units, including setting up dedicated circuits for both indoor and outdoor units to ensure safe operation.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 5,
+  },
+  {
+    question: 'Can I request electrical repairs?',
+    answer: 'Absolutely. Our certified electricians can diagnose and repair electrical faults, from flickering lights and tripped breakers to complete system overhauls.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 6,
+  },
+  {
+    question: 'Do you provide complete house wiring?',
+    answer: 'Yes, we specialize in full house wiring for new constructions as well as complete rewiring for older homes to bring them up to modern safety standards.',
+    category: 'Services',
+    isActive: true,
+    displayOrder: 7,
+  },
+  {
+    question: 'How do I contact the company?',
+    answer: 'You can contact us via our website\'s Service Request form, through our general Contact form, or by reaching out directly via Phone, Email, or WhatsApp.',
+    category: 'General',
+    isActive: true,
+    displayOrder: 8,
+  },
+  {
+    question: 'What information should I provide when requesting service?',
+    answer: 'Please provide your full name, a valid 10-digit mobile number, your address or local area, and a brief description of the electrical issue or service you require.',
+    category: 'Service Request',
+    isActive: true,
+    displayOrder: 9,
+  },
+  {
+    question: 'Do you provide emergency service?',
+    answer: 'Yes, we offer priority emergency services for critical electrical faults. Please call our phone number directly for the fastest emergency response.',
+    category: 'Emergency',
+    isActive: true,
+    displayOrder: 10,
+  }
+];

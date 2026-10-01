@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-electric-cyan: #00f0ff;
+  --color-turquoise: #00d2ff;
+  
+  --color-deep-black: #050505;
+  --color-charcoal: #0a0a0a;
+  --color-graphite: #121212;
+  --color-gray-border: rgba(255, 255, 255, 0.1);
+  --color-gray-hover: rgba(255, 255, 255, 0.15);
+  
+  --color-text-primary: #ffffff;
+  --color-text-muted: #a1a1aa;
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Shadows for Glow Effects */
+  --shadow-glow-sm: 0 0 10px rgba(0, 240, 255, 0.2);
+  --shadow-glow-md: 0 0 20px rgba(0, 240, 255, 0.4);
+  --shadow-glow-lg: 0 0 30px rgba(0, 240, 255, 0.6);
+  --shadow-glow-inner: inset 0 0 10px rgba(0, 240, 255, 0.2);
+
+  /* Animations */
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Base Styles */
+:root {
+  --background: var(--color-deep-black);
+  --foreground: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utility Classes */
+
+@layer utilities {
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-position: center center;
+  }
+
+  .glass-panel {
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-gray-border);
+  }
+  
+  .glass-panel-hover:hover {
+    border-color: var(--color-electric-cyan);
+    box-shadow: var(--shadow-glow-sm);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  }
+}
+
+/* Keyframes */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+  }
+}
