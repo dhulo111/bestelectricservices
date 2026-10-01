@@ -142,8 +142,8 @@ export async function POST(req: NextRequest) {
       <p>${inquiryData.message || 'No message provided.'}</p>
     `;
 
-    // Fire and forget (don't await it to avoid slowing down the response)
-    sendEmail({
+    // Await the email send so it doesn't get cancelled in serverless environments like Vercel
+    await sendEmail({
       to: siteConfig.contact.email, // bestelectricservice7@gmail.com
       subject: emailSubject,
       htmlContent: emailHtml,
